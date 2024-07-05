@@ -29,7 +29,7 @@ const UploadSection: React.FC<UploadSectionProps> = () => {
     >
       <section className="p-6 rounded-lg">
         <header className="mb-8">
-          <h1 className="text-2xl font-semibold text-gray-600 mb-2">
+          <h1 className="text-md font-semibold text-gray-600 mb-2">
             Get complete info about any case from AI-driven research assistance
           </h1>
         </header>
