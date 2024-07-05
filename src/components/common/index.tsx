@@ -32,17 +32,26 @@ const Sidebar: React.FC = () => {
   ];
 
   return (
-    <div className="w-1/3 min-h-screen bg-white text-gray-600 p-4 m-1 rounded-md">
-      <h2 className="text-xl font-bold mb-4">Recent Studies</h2>
-      <div className="space-y-4">
-        {cardsData.map((card, index) => (
-          <Card
-            key={index}
-            title={card.title}
-            date={card.date}
-            status={card.status}
-          />
-        ))}
+    <div
+      style={{
+        width: "30%",
+        height: "100%",
+        backgroundColor: "white",
+        borderRadius: "15px",
+      }}
+    >
+      <div className="w-full text-gray-600 p-6">
+        <h2 className="text-xl font-bold mb-4">Recent Studies</h2>
+        <div className="space-y-4">
+          {cardsData.map((card, index) => (
+            <Card
+              key={index}
+              title={card.title}
+              date={card.date}
+              status={card.status}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

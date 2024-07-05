@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "@/components/common";
 import UploadSection from "@/components/uploads";
+import Navbar from "@/components/navbar";
 
 const HomeView: React.FC = () => {
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
@@ -11,22 +12,22 @@ const HomeView: React.FC = () => {
   };
 
   return (
-    //     <div className="flex min-h-screen">
-    //       <Sidebar />
-    //       <main className="flex-1 p-8 border-2 border-red-500">
-    //         <header className="mb-8">
-    //           <h1 className="text-3xl font-bold text-gray-800 mb-2">Home Page</h1>
-    //         </header>
-    //         <UploadSection />
-    //       </main>
-    //     </div>
-    <div className="flex min-h-screen">
-      <Sidebar />
-      {/* Main section */}
-      <main className="w-full flex-1 p-8 m-1">
+    <>
+      <Navbar />
+      <div
+        style={{
+          width: "80%",
+          margin: "0 auto",
+          display: "flex",
+          marginTop: "1%",
+          height: "100vh",
+          justifyContent: "space-between",
+        }}
+      >
+        <Sidebar />
         <UploadSection />
-      </main>
-    </div>
+      </div>
+    </>
   );
 };
 
