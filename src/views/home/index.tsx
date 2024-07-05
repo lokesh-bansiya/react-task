@@ -4,13 +4,6 @@ import UploadSection from "@/components/uploads";
 import Navbar from "@/components/navbar";
 
 const HomeView: React.FC = () => {
-  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
-
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
-    setUploadedFiles((prevFiles) => [...prevFiles, ...files]);
-  };
-
   return (
     <>
       <Navbar />
@@ -20,7 +13,7 @@ const HomeView: React.FC = () => {
           margin: "0 auto",
           display: "flex",
           marginTop: "1%",
-          height: "100vh",
+          height: "auto",
           justifyContent: "space-between",
         }}
       >
