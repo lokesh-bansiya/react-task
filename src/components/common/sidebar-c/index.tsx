@@ -12,8 +12,6 @@ const SidebarC: React.FC<SidebarCSectionProps> = ({ onStageChange }) => {
     if (onStageChange) onStageChange(1);
   };
 
-  console.log({ cardsData });
-
   return (
     <div
       style={{
@@ -44,7 +42,7 @@ const SidebarC: React.FC<SidebarCSectionProps> = ({ onStageChange }) => {
         </div>
       </div>
       <div className="w-full text-gray-600 p-6 pt-0">
-        <h2 className="text-md font-bold mb-4">Recents</h2>
+        <h2 className="text-md font-bold mb-4">Recent</h2>
         <div className="space-y-3">
           {cardsData?.map((card, index) => (
             <Card
