@@ -60,8 +60,8 @@ const Questions: React.FC<QuestionsProps> = ({ onStageChange }) => {
   return (
     <div
       style={{
-        width: "69%",
-        height: "full",
+        width: "74%",
+        minHeight: "100vh",
         backgroundColor: "white",
         borderRadius: "15px",
       }}

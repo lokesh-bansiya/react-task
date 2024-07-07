@@ -15,8 +15,8 @@ const SidebarC: React.FC<SidebarCSectionProps> = ({ onStageChange }) => {
   return (
     <div
       style={{
-        width: "27%",
-        height: "100%",
+        width: "25%",
+        minHeight: "100vh",
         backgroundColor: "white",
         borderRadius: "15px",
       }}
@@ -24,10 +24,10 @@ const SidebarC: React.FC<SidebarCSectionProps> = ({ onStageChange }) => {
       <div className="w-full text-gray-600 p-6 pb-0">
         {/* Back to Home Button */}
         <div className="w-full flex" onClick={handleBackToHomeClick}>
-          <span className="rounded-full bg-gray-100 w-8 h-8 flex justify-center p-1 mr-2">
+          <span className="rounded-full bg-gray-100 w-7 h-7 flex justify-center p-0.5 mr-2">
             <ChevronLeft />
           </span>
-          <button className="bg-gradient-to-b from-blue-500 to-blue-900 text-white px-4 py-1 rounded-md mb-4">
+          <button className="bg-gradient-to-b from-blue-500 to-blue-900 text-white px-4 py-1 text-sm rounded-md mb-4">
             Back to Home
           </button>
         </div>
@@ -41,7 +41,7 @@ const SidebarC: React.FC<SidebarCSectionProps> = ({ onStageChange }) => {
           </p>
         </div>
       </div>
-      <div className="w-full text-gray-600 p-6 pt-0">
+      <div className="w-full text-gray-600 p-5 pt-0">
         <h2 className="text-md font-bold mb-4">Recent</h2>
         <div className="space-y-3">
           {cardsData?.map((card, index) => (

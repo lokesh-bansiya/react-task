@@ -30,8 +30,8 @@ const UploadSection: React.FC<UploadSectionProps> = ({ onStageChange }) => {
   return (
     <div
       style={{
-        width: "69%",
-        height: "full",
+        width: "74%",
+        minHeight: "100vh",
         backgroundColor: "white",
         borderRadius: "15px",
       }}
@@ -45,7 +45,7 @@ const UploadSection: React.FC<UploadSectionProps> = ({ onStageChange }) => {
 
         <textarea
           placeholder="Ex: Land dispute, Mumbai, judgments"
-          className="w-full p-3 border border-gray-300 rounded-xl mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full text-xs p-3 border border-gray-300 rounded-xl mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <div className="w-full p-10 border-2 border-dashed border-gray-300 rounded-xl bg-gray-50 text-center">

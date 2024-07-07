@@ -8,10 +8,10 @@ const Sidebar: React.FC = () => {
   return (
     <div
       style={{
-        width: "30%",
-        height: "100%",
+        width: "25%",
         backgroundColor: "white",
         borderRadius: "15px",
+        minHeight: "100vh",
       }}
     >
       <div className="w-full text-gray-600 p-6">
@@ -33,10 +33,10 @@ const Sidebar: React.FC = () => {
 
 export const Card: React.FC<CardProps> = ({ title, date, status }) => {
   return (
-    <div className="bg-white text-gray-800 p-4 rounded-md border border-gray-400">
-      <h6 className="text-sm font-bold mb-2 text-blue-500">{title}</h6>
+    <div className="bg-white text-gray-800 p-2 rounded-md border border-gray-400">
+      <h6 className="text-xs font-semibold mb-2 text-blue-500">{title}</h6>
       <div className="flex justify-between items-center">
-        <span className="text-sm text-gray-500">{date}</span>
+        <span className="text-xs text-gray-500">{date}</span>
         <span
           className={`text-xs px-2 py-1 rounded-full flex ${
             status === "completed"
@@ -49,7 +49,7 @@ export const Card: React.FC<CardProps> = ({ title, date, status }) => {
           {status === "completed" && <RightCheckIcon />}
           {status === "in progress" && <ProgressIcon />}
           {status === "failed" && <FailedIcon />}
-          <span className="ml-1"> {status}</span>
+          <span> {status}</span>
         </span>
       </div>
     </div>
